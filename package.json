@@ -12,7 +12,8 @@
     "virtualization"
   ],
   "dependencies": {
-    "react-freeze": "^1.0.0"
+    "react-freeze": "^1.0.0",
+    "react-intersection-observer": "^8.32.2"
   },
   "peerDependencies": {
     "react": "^17.0.0"

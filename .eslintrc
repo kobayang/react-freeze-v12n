@@ -13,4 +13,7 @@
     "NodeJS": true,
     "JSX": true
   },
+  "rules": {
+    "@typescript-eslint/no-floating-promises": "off"
+  }
 }
