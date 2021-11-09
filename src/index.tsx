@@ -5,7 +5,7 @@ import { IntersectionOptions, useInView } from "react-intersection-observer";
 export interface VurtializationProps {
   className?: string;
   children: React.ReactChild;
-  intersectionOptions: IntersectionOptions;
+  intersectionOptions?: IntersectionOptions;
 }
 
 export const Vurtialization: React.VFC<VurtializationProps> = ({
