@@ -2,7 +2,9 @@
   "name": "react-freeze-v12n",
   "version": "1.0.0",
   "description": "Virtualization with react-freeze",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.tsx",
   "author": "kobayang",
   "license": "MIT",
   "private": false,
@@ -11,6 +13,17 @@
     "freeze",
     "virtualization"
   ],
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "run-s build",
+    "test": "run-s test:lint test:types test:build",
+    "test:build": "run-s build",
+    "test:lint": "frolint",
+    "test:types": "tsc --noEmit",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build"
+  },
   "dependencies": {
     "react-freeze": "^1.0.0",
     "react-intersection-observer": "^8.32.2"
@@ -21,6 +34,8 @@
   "devDependencies": {
     "@types/react": "^17.0.34",
     "frolint": "^2.8.2",
+    "microbundle-crl": "^0.13.11",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "typescript": "^4.4.4"
   }
