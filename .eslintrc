@@ -1,0 +1,16 @@
+{
+  "extends": "wantedly-typescript",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "page": true,
+    "browser": true,
+    "globalThis": true,
+    "context": true,
+    "NodeJS": true,
+    "JSX": true
+  },
+}
