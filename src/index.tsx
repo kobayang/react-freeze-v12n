@@ -2,13 +2,13 @@ import React from "react";
 import { Freeze } from "react-freeze";
 import { IntersectionOptions, useInView } from "react-intersection-observer";
 
-export interface VurtializationProps {
+export interface VirtualizationProps {
   className?: string;
   children: React.ReactChild;
   intersectionOptions?: IntersectionOptions;
 }
 
-export const Vurtialization: React.VFC<VurtializationProps> = ({
+export const Virtualization: React.VFC<VirtualizationProps> = ({
   className,
   children,
   intersectionOptions,
